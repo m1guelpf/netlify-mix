@@ -26,7 +26,7 @@ class NetlifyController
     protected function replaceManifestPaths(array $manifest, string $baseUrl) : string
     {
         return collect($manifest)->map(function ($path) use ($baseUrl) {
-            return "$baseUrl/$path";
+            return $baseUrl.$path;
         })->toJson();
     }
 }
