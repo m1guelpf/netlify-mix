@@ -1,0 +1,54 @@
+{
+    "name": "m1guelpf/netlify-mix",
+    "description": "Use Netlify as a CDN for your Laravel Mix assets",
+    "keywords": [
+        "m1guelpf",
+        "netlify",
+        "laravel-mix"
+    ],
+    "homepage": "https://github.com/m1guelpf/netlify-mix",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Miguel Piedrafita",
+            "email": "soy@miguelpiedrafita.com",
+            "role": "Developer",
+            "homepage": "https://miguelpiedrafita.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*",
+        "lcobucci/jwt": "^3.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "M1guelpf\\NetlifyMix\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "M1guelpf\\NetlifyMix\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "M1guelpf\\NetlifyMix\\NetlifyMixServiceProvider"
+            ]
+        }
+    }
+}
