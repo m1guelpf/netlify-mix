@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "5.8.*",
+        "illuminate/support": "5.8.*|^6.0",
         "lcobucci/jwt": "^3.3"
     },
     "require-dev": {
